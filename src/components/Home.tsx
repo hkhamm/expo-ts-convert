@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import React, { FC } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
-import { MainNavigatorParams } from "../navigation/MainNavigator";
+import { TabNavigatorParams } from "../navigation/TabNavigator";
 import { firstNameState, lastNameState } from "../store";
 import { useRecoilState } from "recoil";
 
@@ -20,14 +20,14 @@ const styles = StyleSheet.create({
 
 const Home: FC = () => {
   const navigation = useNavigation<
-    StackNavigationProp<MainNavigatorParams, "Home">
+    StackNavigationProp<TabNavigatorParams, "Home">
   >();
   const [firstName, setFirstName] = useRecoilState(firstNameState);
   const [lastName, setLastName] = useRecoilState(lastNameState);
 
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
+      <Text>Enter Your Name</Text>
       <TextInput
         placeholder="First Name"
         style={styles.name}

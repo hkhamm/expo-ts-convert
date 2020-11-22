@@ -1,16 +1,16 @@
 import { atom, selector } from "recoil";
 
-export const firstNameState = atom<string | undefined>({
+export const firstNameState = atom<string>({
   key: "firstNameState",
-  default: undefined,
+  default: "",
 });
 
-export const lastNameState = atom<string | undefined>({
+export const lastNameState = atom<string>({
   key: "lastNameState",
-  default: undefined,
+  default: "",
 });
 
-export const nameSelector = selector<string | undefined>({
+export const nameSelector = selector<string>({
   key: "nameSelector",
   get: ({ get }) => {
     const firstName = get(firstNameState);
