@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { FC } from "react";
-import { View, Text, StyleSheet, TextInput, Button } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { ContentNavigatorParams } from "../../navigation/ContentNavigator";
 
