@@ -27,7 +27,7 @@ const Home: FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Enter Your Name</Text>
+      <Text>Enter your name</Text>
       <TextInput
         placeholder="First Name"
         style={styles.name}

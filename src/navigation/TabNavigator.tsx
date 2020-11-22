@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../components/Home";
 import Details from "../components/Details";
-import Content from "../components/Content";
+import ContentNavigator from "./ContentNavigator";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import {
   faHome,
@@ -46,7 +46,7 @@ const TabNavigator: FC = () => (
     />
     <Tab.Screen
       name="Content"
-      component={Content}
+      component={ContentNavigator}
       options={{
         tabBarIcon: ({ color }) => (
           <FontAwesomeIcon icon={faBreadSlice} color={color} />

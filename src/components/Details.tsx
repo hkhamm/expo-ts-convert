@@ -19,6 +19,7 @@ const Details: FC = () => {
   const name = useRecoilValue(nameSelector);
   return (
     <View style={styles.container}>
+      <Text>Your name</Text>
       <Text style={styles.name}>{name}</Text>
     </View>
   );
