@@ -19,13 +19,7 @@ export type TabNavigatorParams = {
 const Tab = createBottomTabNavigator<TabNavigatorParams>();
 
 const TabNavigator: FC = () => (
-  <Tab.Navigator
-    initialRouteName="Home"
-    tabBarOptions={{
-      activeTintColor: "black",
-      inactiveTintColor: "gray",
-    }}
-  >
+  <Tab.Navigator initialRouteName="Home">
     <Tab.Screen
       name="Home"
       component={Home}
