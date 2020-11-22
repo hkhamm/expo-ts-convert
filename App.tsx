@@ -1,23 +1,17 @@
-import { StatusBar } from "expo-status-bar"
-import React, { FC } from "react"
-import { StyleSheet, Text, View } from "react-native"
+import "react-native-gesture-handler";
+import React, { FC } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import MainNavigator from "./src/navigation/MainNavigator";
+import { StatusBar } from "expo-status-bar";
+import { RecoilRoot } from "recoil";
 
-const App: FC = () => {
-    return (
-        <View style={styles.container}>
-            <Text>Open up App.js to start working on your app!</Text>
-            <StatusBar style="auto" />
-        </View>
-    )
-}
+const App: FC = () => (
+  <NavigationContainer>
+    <StatusBar style="auto" />
+    <RecoilRoot>
+      <MainNavigator />
+    </RecoilRoot>
+  </NavigationContainer>
+);
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-})
-
-export default App
+export default App;
