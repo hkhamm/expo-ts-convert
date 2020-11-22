@@ -10,7 +10,7 @@ export const lastNameState = atom<string>({
   default: "",
 });
 
-export const nameSelector = selector<string>({
+export const fullNameState = selector<string>({
   key: "nameSelector",
   get: ({ get }) => {
     const firstName = get(firstNameState);
