@@ -3,7 +3,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import React, { FC } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 import { MainNavigatorParams } from "../navigation/MainNavigator";
-import { nameState } from "../store";
+import { firstNameState, lastNameState } from "../store";
 import { useRecoilState } from "recoil";
 
 const styles = StyleSheet.create({
@@ -22,15 +22,23 @@ const Home: FC = () => {
   const navigation = useNavigation<
     StackNavigationProp<MainNavigatorParams, "Home">
   >();
-  const [name, setName] = useRecoilState(nameState);
+  const [firstName, setFirstName] = useRecoilState(firstNameState);
+  const [lastName, setLastName] = useRecoilState(lastNameState);
 
   return (
     <View style={styles.container}>
       <Text>Home Screen</Text>
       <TextInput
+        placeholder="First Name"
         style={styles.name}
-        value={name}
-        onChangeText={(value) => setName(value)}
+        value={firstName}
+        onChangeText={(value) => setFirstName(value)}
+      />
+      <TextInput
+        placeholder="Last Name"
+        style={styles.name}
+        value={lastName}
+        onChangeText={(value) => setLastName(value)}
       />
       <Button
         title="Go to Details"

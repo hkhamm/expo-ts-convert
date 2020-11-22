@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { useRecoilValue } from "recoil";
-import { nameState } from "../store";
+import { nameSelector } from "../store";
 
 const styles = StyleSheet.create({
   container: {
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 });
 
 const Details: FC = () => {
-  const name = useRecoilValue(nameState);
+  const name = useRecoilValue(nameSelector);
   return (
     <View style={styles.container}>
       <Text>Details Screen</Text>
